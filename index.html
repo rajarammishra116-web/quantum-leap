@@ -4,22 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Quantum Leap — BSE Odisha Notes (Class 9 & 10)</title>
-  <meta name="description" content="Quantum Leap: concise, curriculum-aligned BSE Odisha Class 9 & Class 10 notes, free mock tests and downloadable PDFs.">
-  <link rel="icon" href="/public/logo.png" type="image/png">
-  <link rel="stylesheet" href="/public/style.css">
-  <meta name="theme-color" content="#0a0a0f">
+
+  <meta name="description"
+        content="Quantum Leap: Class 9 & Class 10 BSE Odisha notes, mock tests, and downloadable materials.">
+  <meta name="keywords"
+        content="BSE Odisha notes, Odisha 9th notes, Odisha 10th notes, Quantum Leap, free mock tests">
+
+  <link rel="icon" href="/public/logo.png" />
+  <link rel="stylesheet" href="/public/style.css" />
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
+
       <div class="brand">
-        <img src="/public/logo.png" alt="Quantum Leap" class="brand-logo">
+        <img src="/public/logo.png" class="brand-logo" alt="Quantum Leap">
         <div class="brand-text">
           <div class="site-title">Quantum Leap</div>
           <div class="site-tag">From Ignorance to Enlightenment</div>
         </div>
       </div>
-      <nav class="site-nav" aria-label="Primary">
+
+      <nav class="site-nav">
         <button class="nav-btn active" onclick="nav('home', this)">Home</button>
         <button class="nav-btn" onclick="nav('class9', this)">Class 9</button>
         <button class="nav-btn" onclick="nav('class10', this)">Class 10</button>
@@ -27,130 +36,155 @@
         <button class="nav-btn" onclick="nav('downloads', this)">Downloads</button>
         <button class="nav-btn" onclick="nav('about', this)">About</button>
       </nav>
-      <button class="menu-toggle" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
+
+      <button class="menu-toggle" onclick="toggleMobileMenu(this)">☰</button>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="container">
+
+    <!-- HOME -->
     <section id="home" class="page active">
+
       <div class="hero neon-hero">
-        <h1>Quantum Leap — Odisha Board Notes</h1>
-        <p class="lead">Clear, concise and curriculum-aligned Class 9 & 10 notes with free mock tests designed for BSE Odisha students.</p>
+        <h1>Odisha Board Learning, Reinvented</h1>
+        <p class="lead">
+          Clean, structured notes and exam-focused mock tests for Class 9 & 10.
+        </p>
+
         <div class="cta-row">
-          <a class="btn" href="#" onclick="nav('class9', this)">Explore Class 9</a>
-          <a class="btn ghost" href="#" onclick="nav('mock-tests', this)">Try Mock Tests</a>
+          <button class="btn" onclick="nav('class9', this)">Explore Class 9</button>
+          <button class="btn ghost" onclick="nav('mock-tests', this)">Try Mock Tests</button>
         </div>
       </div>
 
-      <section class="features grid">
-        <article class="card neon-card">
+      <div class="grid">
+        <div class="card neon-card">
           <h3>Class 9 Notes</h3>
-          <p>Chapter-wise summaries, important points, and quick revision sheets.</p>
-        </article>
+          <p>Well-structured chapter-wise notes for all BSE Odisha subjects.</p>
+        </div>
 
-        <article class="card neon-card">
+        <div class="card neon-card">
           <h3>Class 10 Notes</h3>
-          <p>Complete syllabus coverage with example questions and solved problems.</p>
-        </article>
+          <p>High-scoring explanations, examples and revision content.</p>
+        </div>
 
-        <article class="card neon-card">
+        <div class="card neon-card">
           <h3>Free Mock Tests</h3>
-          <p>Exam-pattern tests with instant scoring and detailed solutions.</p>
-        </article>
+          <p>Instant scoring. Exam-level questions. Unlimited attempts.</p>
+        </div>
 
-        <article class="card neon-card">
-          <h3>Downloadable PDFs</h3>
-          <p>Request chapter PDFs or download quick revision guides via email.</p>
-        </article>
-      </section>
+        <div class="card neon-card">
+          <h3>Downloads</h3>
+          <p>Get PDFs and revision sheets delivered to your email.</p>
+        </div>
+      </div>
     </section>
 
+    <!-- CLASS 9 -->
     <section id="class9" class="page">
       <div class="page-header">
         <h2>Class 9 — BSE Odisha</h2>
         <button class="admin-toggle" onclick="toggleAdmin('class9', this)">+ Add Note</button>
       </div>
 
-      <div id="admin-class9" class="admin-panel" aria-hidden="true">
-        <form onsubmit="event.preventDefault(); addContent('9')">
-          <label>Subject<input id="subject-class9" placeholder="Subject"></label>
-          <label>Chapter Title<input id="chapter-title-class9" placeholder="Chapter Title"></input></label>
-          <label>Content<textarea id="content-class9" placeholder="Enter study notes..."></textarea></label>
-          <div class="form-row"><button class="btn" type="button" onclick="addContent('9')">Save</button></div>
-        </form>
+      <div id="admin-class9" class="admin-panel">
+        <input id="subject-class9" placeholder="Subject">
+        <input id="chapter-title-class9" placeholder="Chapter Title">
+        <textarea id="content-class9" placeholder="Write content..."></textarea>
+        <button class="btn" onclick="addContent('9')">Save</button>
       </div>
 
       <div id="view-class9" class="subjects-grid"></div>
     </section>
 
+    <!-- CLASS 10 -->
     <section id="class10" class="page">
       <div class="page-header">
         <h2>Class 10 — BSE Odisha</h2>
         <button class="admin-toggle" onclick="toggleAdmin('class10', this)">+ Add Note</button>
       </div>
 
-      <div id="admin-class10" class="admin-panel" aria-hidden="true">
-        <form onsubmit="event.preventDefault(); addContent('10')">
-          <label>Subject<input id="subject-class10" placeholder="Subject"></label>
-          <label>Chapter Title<input id="chapter-title-class10" placeholder="Chapter Title"></input></label>
-          <label>Content<textarea id="content-class10" placeholder="Enter study notes..."></textarea></label>
-          <div class="form-row"><button class="btn" type="button" onclick="addContent('10')">Save</button></div>
-        </form>
+      <div id="admin-class10" class="admin-panel">
+        <input id="subject-class10" placeholder="Subject">
+        <input id="chapter-title-class10" placeholder="Chapter Title">
+        <textarea id="content-class10" placeholder="Write content..."></textarea>
+        <button class="btn" onclick="addContent('10')">Save</button>
       </div>
 
       <div id="view-class10" class="subjects-grid"></div>
     </section>
 
+    <!-- MOCK TESTS -->
     <section id="mock-tests" class="page">
       <div class="page-header">
-        <h2>Free Mock Tests</h2>
+        <h2>Mock Tests</h2>
         <button class="admin-toggle" onclick="toggleAdmin('tests', this)">+ Add Question</button>
       </div>
 
-      <div id="admin-tests" class="admin-panel" aria-hidden="true">
-        <form onsubmit="event.preventDefault(); addQuestion()">
-          <label>Class<select id="test-class"><option value="9">Class 9</option><option value="10">Class 10</option></select></label>
-          <label>Question<textarea id="q-text" placeholder="Question"></textarea></label>
-          <div class="grid two">
-            <input id="opt-a" placeholder="Option A"><input id="opt-b" placeholder="Option B">
-            <input id="opt-c" placeholder="Option C"><input id="opt-d" placeholder="Option D">
-          </div>
-          <label>Correct<select id="correct-opt"><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
-          <div class="form-row"><button class="btn" type="button" onclick="addQuestion()">Save</button></div>
-        </form>
+      <div id="admin-tests" class="admin-panel">
+        <select id="test-class">
+          <option value="9">Class 9</option>
+          <option value="10">Class 10</option>
+        </select>
+
+        <textarea id="q-text" placeholder="Write question..."></textarea>
+
+        <div class="grid two">
+          <input id="opt-a" placeholder="Option A">
+          <input id="opt-b" placeholder="Option B">
+          <input id="opt-c" placeholder="Option C">
+          <input id="opt-d" placeholder="Option D">
+        </div>
+
+        <select id="correct-opt">
+          <option value="A">A</option><option value="B">B</option>
+          <option value="C">C</option><option value="D">D</option>
+        </select>
+
+        <button class="btn" onclick="addQuestion()">Save Question</button>
       </div>
 
       <div id="test-select" class="test-selection grid">
         <div class="card neon-card">
-          <h3>Class 9 Test</h3><p id="count-9">0 Questions</p><button class="btn" onclick="startTest('9')">Start</button>
+          <h3>Class 9 Test</h3>
+          <p id="count-9">0 Questions</p>
+          <button class="btn" onclick="startTest('9')">Start</button>
         </div>
+
         <div class="card neon-card">
-          <h3>Class 10 Test</h3><p id="count-10">0 Questions</p><button class="btn" onclick="startTest('10')">Start</button>
+          <h3>Class 10 Test</h3>
+          <p id="count-10">0 Questions</p>
+          <button class="btn" onclick="startTest('10')">Start</button>
         </div>
       </div>
 
-      <div id="test-ui" class="test-interface" aria-hidden="true">
+      <div id="test-ui" class="test-interface">
         <h3 id="q-display-num">Question</h3>
         <p id="q-display-text"></p>
         <div id="options-container" class="options-list"></div>
-        <div class="test-actions">
-          <button class="btn" onclick="nextQuestion()">Next</button>
-          <button class="btn ghost" onclick="cancelTest()">Exit</button>
-        </div>
+        <button class="btn" onclick="nextQuestion()">Next</button>
+        <button class="btn ghost" onclick="cancelTest()">Exit</button>
       </div>
     </section>
 
+    <!-- DOWNLOADS -->
     <section id="downloads" class="page">
-      <div class="card content-box">
-        <h3>Request PDF Materials</h3>
-        <p>Send an email to <strong>contact@quantumleap.edu</strong> with class, subject and chapter. We'll email you the PDF.</p>
+      <div class="card neon-card">
+        <h3>Request PDFs</h3>
+        <p>Email chapter details to: <strong>contact@quantumleap.edu</strong></p>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="page">
-      <div class="card content-box">
+      <div class="card neon-card">
         <h3>About Quantum Leap</h3>
-        <p>We create concise BSE Odisha notes and free mock tests. Our vision: make high-quality, curriculum-aligned learning accessible.</p>
+        <p>
+          We deliver clear, structured notes and practice tools designed
+          specifically for BSE Odisha students.
+        </p>
       </div>
     </section>
 
@@ -158,122 +192,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Quantum Leap. All rights reserved. | BSE Odisha Notes</p>
+      © 2025 Quantum Leap — All Rights Reserved.
     </div>
   </footer>
 
   <script src="/public/app.js"></script>
-  <script>
-    const STORAGE_KEY = 'ql_data_v1';
-    let allData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    let testSession = { questions: [], index: 0, score: 0 };
-
-    function saveData(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(allData)); updateCounts(); }
-
-    function nav(pageId, btn){
-      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-      const el = document.getElementById(pageId);
-      if(el) el.classList.add('active');
-      document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-      if(btn && btn.classList) btn.classList.add('active');
-      const menu = document.querySelector('.site-nav');
-      if(menu && menu.classList.contains('open')) menu.classList.remove('open');
-      window.scrollTo({top:0, behavior:'smooth'});
-    }
-
-    function toggleAdmin(id, btn){
-      const panel = document.getElementById('admin-'+id);
-      if(!panel) return;
-      panel.classList.toggle('active');
-      panel.setAttribute('aria-hidden', !panel.classList.contains('active'));
-      if(btn) btn.classList.toggle('active');
-    }
-
-    function toggleMobileMenu(btn){
-      const nav = document.querySelector('.site-nav');
-      if(!nav) return;
-      nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
-    }
-
-    function addContent(cls){
-      const subj = document.getElementById('subject-class'+cls).value || 'General';
-      const title = document.getElementById('chapter-title-class'+cls).value || 'Untitled';
-      const body = document.getElementById('content-class'+cls).value || '';
-      allData.push({type:'note', class: cls, subject: subj, title: title, body: body, id: Date.now().toString()});
-      saveData();
-      renderContent(cls);
-      alert('Saved');
-    }
-
-    function renderContent(cls){
-      const container = document.getElementById('view-class'+cls);
-      const list = allData.filter(d=>d.type==='note' && d.class==cls);
-      if(!container) return;
-      container.innerHTML = list.map(item=>`
-        <div class="card neon-card">
-          <h4>${'${item.subject}'}</h4>
-          <h3>${'${item.title}'}</h3>
-          <p>${'${item.body}'}</p>
-        </div>
-      `).join('') || `<div class="card"><p>No notes yet. Use + Add Note to create one.</p></div>`;
-    }
-
-    function addQuestion(){
-      const q = {
-        type:'question',
-        class: document.getElementById('test-class').value,
-        text: document.getElementById('q-text').value,
-        options: {
-          A: document.getElementById('opt-a').value,
-          B: document.getElementById('opt-b').value,
-          C: document.getElementById('opt-c').value,
-          D: document.getElementById('opt-d').value
-        },
-        correct: document.getElementById('correct-opt').value,
-        id: Date.now().toString()
-      };
-      allData.push(q); saveData(); alert('Question saved'); updateCounts();
-    }
-
-    function updateCounts(){
-      document.getElementById('count-9').innerText = allData.filter(d=>d.type==='question'&&d.class=='9').length + ' Questions';
-      document.getElementById('count-10').innerText = allData.filter(d=>d.type==='question'&&d.class=='10').length + ' Questions';
-    }
-
-    function startTest(cls){
-      testSession.questions = allData.filter(d=>d.type==='question'&&d.class==cls);
-      if(testSession.questions.length===0){ alert('No questions'); return; }
-      testSession.index = 0; testSession.score = 0;
-      document.getElementById('test-select').style.display = 'none';
-      document.getElementById('test-ui').style.display = 'block';
-      showQuestion();
-      document.getElementById('test-ui').setAttribute('aria-hidden','false');
-    }
-
-    function showQuestion(){
-      const q = testSession.questions[testSession.index];
-      document.getElementById('q-display-num').innerText = `Question ${testSession.index+1} of ${testSession.questions.length}`;
-      document.getElementById('q-display-text').innerText = q.text;
-      const opts = document.getElementById('options-container');
-      opts.innerHTML = Object.keys(q.options).map(k=>`<div class="option-item" role="button" tabindex="0" onclick="checkAnswer('${k}','${q.correct}', this)">${k}. ${'${q.options[k]}'}</div>`).join('');
-      const next = document.querySelector('#test-ui .test-actions .btn');
-      if(next) next.disabled = true;
-    }
-
-    function checkAnswer(selected, correct, el){
-      if(selected===correct){ el.classList.add('correct'); testSession.score++; }
-      else { el.classList.add('incorrect'); }
-      document.querySelectorAll('#options-container .option-item').forEach(x=>x.onclick=null);
-      const next = document.querySelector('#test-ui .test-actions .btn');
-      if(next) next.disabled = false;
-    }
-
-    function nextQuestion(){ testSession.index++; if(testSession.index<testSession.questions.length) showQuestion(); else { alert('Test complete: '+testSession.score+'/'+testSession.questions.length); cancelTest(); } }
-
-    function cancelTest(){ document.getElementById('test-ui').style.display='none'; document.getElementById('test-select').style.display='grid'; document.getElementById('test-ui').setAttribute('aria-hidden','true'); }
-
-    document.addEventListener('DOMContentLoaded', ()=>{ renderContent(9); renderContent(10); updateCounts(); });
-  </script>
 </body>
 </html>
