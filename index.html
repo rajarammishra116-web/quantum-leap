@@ -1,345 +1,290 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Quantum Leap - BSE Odisha Notes, Odisha Board Class 9 & 10 notes, free mock tests.">
-  <title>Quantum Leap — Odisha Board Notes</title>
-  
-  <style>
-    /* CSS STYLES (The Look and Feel) */
-    :root {
-      --bg: #0a0a0f;
-      --card-bg: rgba(26, 26, 46, 0.8);
-      --primary: #00d9ff;
-      --secondary: #7b2ff7;
-      --text: #e0e0e0;
-      --text-muted: #b0b0b0;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%); color: var(--text); line-height: 1.6; min-height: 100vh; }
-    
-    /* Layout */
-    .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
-    .page { display: none; animation: fadeIn 0.4s ease; }
-    .page.active { display: block; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-    /* Header */
-    header { background: rgba(10, 10, 15, 0.95); border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 100; padding: 1rem 0; }
-    .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .brand-logo { height: 60px; border-radius: 8px; }
-    .site-title { font-size: 1.5rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .small { font-size: 0.85rem; color: var(--text-muted); }
-
-    /* Nav */
-    nav { display: flex; gap: 5px; flex-wrap: wrap; }
-    .nav-btn { background: transparent; border: 1px solid rgba(0, 217, 255, 0.3); color: var(--text); padding: 8px 16px; border-radius: 6px; cursor: pointer; transition: 0.3s; }
-    .nav-btn:hover, .nav-btn.active { background: rgba(0, 217, 255, 0.1); border-color: var(--primary); color: var(--primary); }
-
-    /* Hero & Grid */
-    .hero { text-align: center; padding: 3rem 1rem; border: 1px solid rgba(0,217,255,0.2); border-radius: 12px; margin-bottom: 2rem; background: rgba(0,217,255,0.02); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { background: var(--card-bg); border: 1px solid rgba(123, 47, 247, 0.3); padding: 1.5rem; border-radius: 12px; transition: 0.3s; }
-    .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-    .card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-    
-    /* Buttons */
-    .btn { display: inline-block; background: linear-gradient(45deg, var(--primary), var(--secondary)); color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; border: none; cursor: pointer; }
-    
-    /* Admin & Forms */
-    .admin-toggle { background: #333; color: var(--primary); border: 1px solid var(--primary); padding: 5px 10px; border-radius: 4px; cursor: pointer; float: right; }
-    .admin-panel { display: none; background: rgba(123, 47, 247, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
-    .admin-panel.active { display: block; }
-    input, select, textarea { width: 100%; padding: 10px; margin: 5px 0; background: #111; border: 1px solid #444; color: #fff; border-radius: 4px; }
-
-    /* Tests */
-    .test-interface { display: none; }
-    .test-interface.active { display: block; }
-    .option-item { padding: 10px; border: 1px solid #444; margin: 5px 0; border-radius: 4px; cursor: pointer; }
-    .option-item:hover { border-color: var(--primary); background: rgba(0,217,255,0.05); }
-    .option-item.selected { background: rgba(0,217,255,0.1); border-color: var(--primary); }
-    
-    .toast { position: fixed; bottom: 20px; right: 20px; background: var(--secondary); color: white; padding: 10px 20px; border-radius: 4px; animation: fadeIn 0.3s; }
-  </style>
+  <title>Quantum Leap — Odisha Board Notes (Class 9 & 10)</title>
+  <meta name="description" content="Quantum Leap: concise, curriculum-aligned BSE Odisha Class 9 & Class 10 notes, free mock tests and downloadable PDFs.">
+  <meta name="keywords" content="BSE Odisha notes, Odisha board, class 9 notes, class 10 notes, mock tests, Quantum Leap">
+  <link rel="icon" href="/public/logo.png" type="image/png">
+  <link rel="stylesheet" href="/public/style.css">
+  <meta name="theme-color" content="#0a0a0f">
+  <script type="application/ld+json">
+  { "@context":"https://schema.org", "@type":"EducationalOrganization", "name":"Quantum Leap", "url":"https://quantum-leap-beta.vercel.app", "logo":"https://quantum-leap-beta.vercel.app/public/logo.png", "sameAs": [] }
+  </script>
 </head>
 <body>
-
-<header>
-  <div class="container header-content">
-    <div class="brand">
-      <img src="logo.jpg" alt="QL Logo" class="brand-logo">
-      <div>
-        <div class="site-title">Quantum Leap</div>
-        <div class="small">From Ignorance to Enlightenment</div>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand">
+        <img src="/public/logo.png" alt="Quantum Leap" class="brand-logo">
+        <div class="brand-text">
+          <div class="site-title">Quantum Leap</div>
+          <div class="site-tag">From Ignorance to Enlightenment</div>
+        </div>
       </div>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-btn active" onclick="nav('home', this)">Home</button>
+        <button class="nav-btn" onclick="nav('class9', this)">Class 9</button>
+        <button class="nav-btn" onclick="nav('class10', this)">Class 10</button>
+        <button class="nav-btn" onclick="nav('mock-tests', this)">Mock Tests</button>
+        <button class="nav-btn" onclick="nav('downloads', this)">Downloads</button>
+        <button class="nav-btn" onclick="nav('about', this)">About</button>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
     </div>
-    <nav>
-      <button class="nav-btn active" onclick="nav('home')">Home</button>
-      <button class="nav-btn" onclick="nav('class9')">Class 9</button>
-      <button class="nav-btn" onclick="nav('class10')">Class 10</button>
-      <button class="nav-btn" onclick="nav('mock-tests')">Mock Tests</button>
-      <button class="nav-btn" onclick="nav('downloads')">Downloads</button>
-      <button class="nav-btn" onclick="nav('about')">About</button>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<main class="container">
-  
-  <div id="home" class="page active">
-    <section class="hero">
-      <h1>Quantum Leap — Redefining Odisha Board Learning</h1>
-      <p>Empowering students with clear, structured, and concept-driven learning for BSE Odisha Class 9 & 10.</p>
+  <main class="container">
+    <section id="home" class="page active">
+      <div class="hero">
+        <h1>Quantum Leap — Odisha Board Notes</h1>
+        <p class="lead">Clear, concise and curriculum-aligned Class 9 & 10 notes with free mock tests designed for BSE Odisha students.</p>
+        <div class="cta-row">
+          <a class="btn" href="#" onclick="nav('class9', this)">Explore Class 9</a>
+          <a class="btn ghost" href="#" onclick="nav('mock-tests', this)">Try Mock Tests</a>
+        </div>
+      </div>
+
+      <section class="features grid">
+        <article class="card">
+          <h3>Class 9 Notes</h3>
+          <p>Chapter-wise summaries, important points, and quick revision sheets.</p>
+        </article>
+
+        <article class="card">
+          <h3>Class 10 Notes</h3>
+          <p>Complete syllabus coverage with example questions and solved problems.</p>
+        </article>
+
+        <article class="card">
+          <h3>Free Mock Tests</h3>
+          <p>Exam-pattern tests with instant scoring and detailed solutions.</p>
+        </article>
+
+        <article class="card">
+          <h3>Downloadable PDFs</h3>
+          <p>Request chapter PDFs or download quick revision guides via email.</p>
+        </article>
+      </section>
     </section>
 
-    <section class="grid">
-      <div class="card" onclick="nav('class9')">
-        <h3>Class 9 Notes</h3>
-        <p class="small">Chapter-wise BSE Odisha Class 9 notes. Click to explore.</p>
+    <section id="class9" class="page">
+      <div class="page-header">
+        <h2>Class 9 — BSE Odisha</h2>
+        <button class="admin-toggle" onclick="toggleAdmin('class9', this)">+ Add Note</button>
       </div>
-      <div class="card" onclick="nav('class10')">
-        <h3>Class 10 Notes</h3>
-        <p class="small">Complete Class 10 Odisha Board notes aligned with the exam pattern.</p>
+
+      <div id="admin-class9" class="admin-panel" aria-hidden="true">
+        <form onsubmit="event.preventDefault(); addContent('9')">
+          <label>Subject<input id="subject-class9" placeholder="Subject"></label>
+          <label>Chapter Title<input id="chapter-title-class9" placeholder="Chapter Title"></label>
+          <label>Content<textarea id="content-class9" placeholder="Enter study notes..."></textarea></label>
+          <div class="form-row"><button class="btn" type="button" onclick="addContent('9')">Save</button></div>
+        </form>
       </div>
-      <div class="card" onclick="nav('mock-tests')">
-        <h3>Free Mock Tests</h3>
-        <p class="small">Practice tests built on BSE Odisha pattern with instant scoring.</p>
+
+      <div id="view-class9" class="subjects-grid"></div>
+    </section>
+
+    <section id="class10" class="page">
+      <div class="page-header">
+        <h2>Class 10 — BSE Odisha</h2>
+        <button class="admin-toggle" onclick="toggleAdmin('class10', this)">+ Add Note</button>
       </div>
-      <div class="card" onclick="nav('downloads')">
-        <h3>Downloads</h3>
-        <p class="small">Request PDFs or download materials.</p>
+
+      <div id="admin-class10" class="admin-panel" aria-hidden="true">
+        <form onsubmit="event.preventDefault(); addContent('10')">
+          <label>Subject<input id="subject-class10" placeholder="Subject"></label>
+          <label>Chapter Title<input id="chapter-title-class10" placeholder="Chapter Title"></label>
+          <label>Content<textarea id="content-class10" placeholder="Enter study notes..."></textarea></label>
+          <div class="form-row"><button class="btn" type="button" onclick="addContent('10')">Save</button></div>
+        </form>
+      </div>
+
+      <div id="view-class10" class="subjects-grid"></div>
+    </section>
+
+    <section id="mock-tests" class="page">
+      <div class="page-header">
+        <h2>Free Mock Tests</h2>
+        <button class="admin-toggle" onclick="toggleAdmin('tests', this)">+ Add Question</button>
+      </div>
+
+      <div id="admin-tests" class="admin-panel" aria-hidden="true">
+        <form onsubmit="event.preventDefault(); addQuestion()">
+          <label>Class<select id="test-class"><option value="9">Class 9</option><option value="10">Class 10</option></select></label>
+          <label>Question<textarea id="q-text" placeholder="Question"></textarea></label>
+          <div class="grid two">
+            <input id="opt-a" placeholder="Option A"><input id="opt-b" placeholder="Option B">
+            <input id="opt-c" placeholder="Option C"><input id="opt-d" placeholder="Option D">
+          </div>
+          <label>Correct<select id="correct-opt"><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
+          <div class="form-row"><button class="btn" type="button" onclick="addQuestion()">Save</button></div>
+        </form>
+      </div>
+
+      <div id="test-select" class="test-selection grid">
+        <div class="card">
+          <h3>Class 9 Test</h3><p id="count-9">0 Questions</p><button class="btn" onclick="startTest('9')">Start</button>
+        </div>
+        <div class="card">
+          <h3>Class 10 Test</h3><p id="count-10">0 Questions</p><button class="btn" onclick="startTest('10')">Start</button>
+        </div>
+      </div>
+
+      <div id="test-ui" class="test-interface" aria-hidden="true">
+        <h3 id="q-display-num">Question</h3>
+        <p id="q-display-text"></p>
+        <div id="options-container" class="options-list"></div>
+        <div class="test-actions">
+          <button class="btn" onclick="nextQuestion()">Next</button>
+          <button class="btn ghost" onclick="cancelTest()">Exit</button>
+        </div>
       </div>
     </section>
-  </div>
 
-  <div id="class9" class="page">
-    <button class="admin-toggle" onclick="toggleAdmin('class9')">+ Add Note</button>
-    <h2>Class 9 Resources</h2>
-    
-    <div id="admin-class9" class="admin-panel">
-      <h4>Add Study Material</h4>
-      <input type="text" id="subject-class9" placeholder="Subject (e.g. Science)">
-      <input type="text" id="chapter-title-class9" placeholder="Chapter Title">
-      <textarea id="content-class9" placeholder="Content..."></textarea>
-      <button class="btn" onclick="addContent('class9')">Save Material</button>
-    </div>
-
-    <div id="view-class9" class="grid"></div>
-  </div>
-
-  <div id="class10" class="page">
-    <button class="admin-toggle" onclick="toggleAdmin('class10')">+ Add Note</button>
-    <h2>Class 10 Resources</h2>
-    <div id="admin-class10" class="admin-panel">
-      <h4>Add Study Material</h4>
-      <input type="text" id="subject-class10" placeholder="Subject">
-      <input type="text" id="chapter-title-class10" placeholder="Chapter Title">
-      <textarea id="content-class10" placeholder="Content..."></textarea>
-      <button class="btn" onclick="addContent('class10')">Save Material</button>
-    </div>
-    <div id="view-class10" class="grid"></div>
-  </div>
-
-  <div id="mock-tests" class="page">
-    <button class="admin-toggle" onclick="toggleAdmin('tests')">+ Add Question</button>
-    <h2>Mock Tests</h2>
-
-    <div id="admin-tests" class="admin-panel">
-      <h4>Add Question</h4>
-      <select id="test-class">
-        <option value="9">Class 9</option>
-        <option value="10">Class 10</option>
-      </select>
-      <textarea id="q-text" placeholder="Question Text"></textarea>
-      <input type="text" id="opt-a" placeholder="Option A">
-      <input type="text" id="opt-b" placeholder="Option B">
-      <input type="text" id="opt-c" placeholder="Option C">
-      <input type="text" id="opt-d" placeholder="Option D">
-      <select id="correct-opt">
-        <option value="A">A</option> <option value="B">B</option> <option value="C">C</option> <option value="D">D</option>
-      </select>
-      <button class="btn" onclick="addQuestion()">Save Question</button>
-    </div>
-
-    <div id="test-select" class="grid">
-      <div class="card">
-        <h3>Class 9 Test</h3>
-        <p id="count-9">0 Questions available</p>
-        <button class="btn" onclick="startTest('9')">Start Test</button>
+    <section id="downloads" class="page">
+      <div class="card content-box">
+        <h3>Request PDF Materials</h3>
+        <p>Send an email to <strong>contact@quantumleap.edu</strong> with class, subject and chapter. We'll email you the PDF.</p>
       </div>
-      <div class="card">
-        <h3>Class 10 Test</h3>
-        <p id="count-10">0 Questions available</p>
-        <button class="btn" onclick="startTest('10')">Start Test</button>
+    </section>
+
+    <section id="about" class="page">
+      <div class="card content-box">
+        <h3>About Quantum Leap</h3>
+        <p>We create concise BSE Odisha notes and free mock tests. Our vision: make high-quality, curriculum-aligned learning accessible.</p>
       </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Quantum Leap. All rights reserved. | BSE Odisha Notes</p>
     </div>
+  </footer>
 
-    <div id="test-ui" class="test-interface">
-      <h3 id="q-display-num">Question 1</h3>
-      <p id="q-display-text" style="font-size: 1.2rem; margin: 20px 0;"></p>
-      <div id="options-container"></div>
-      <br>
-      <button class="btn" onclick="nextQuestion()">Next</button>
-      <button class="btn" style="background:#555" onclick="cancelTest()">Exit</button>
-    </div>
-  </div>
+  <script src="/public/app.js"></script>
+  <script>
+    // Basic client-side data + behaviour (localStorage for prototype)
+    const STORAGE_KEY = 'ql_data_v1';
+    let allData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    let testSession = { questions: [], index: 0, score: 0 };
 
-  <div id="downloads" class="page">
-    <div class="card">
-      <h3>📥 Request PDFs</h3>
-      <p>Email us at contact@quantumleap.edu with the chapter name.</p>
-    </div>
-  </div>
-  
-  <div id="about" class="page">
-    <div class="card">
-      <h3>Vision</h3>
-      <p>"Our vision is to empower students to understand the universe through structured, intuitive, and concept-driven physics education."</p>
-    </div>
-  </div>
+    function saveData(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(allData)); updateCounts(); }
 
-</main>
-
-<script>
-  // --- JAVASCRIPT ENGINE (Restored) ---
-  
-  let allData = [];
-  let testSession = { questions: [], index: 0, score: 0 };
-
-  // 1. Navigation Logic
-  function nav(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  }
-
-  function toggleAdmin(id) {
-    document.getElementById('admin-'+id).classList.toggle('active');
-  }
-
-  // 2. Data Management (Local Storage)
-  function loadData() {
-    const saved = localStorage.getItem('ql_data');
-    if (saved) allData = JSON.parse(saved);
-    renderContent('class9');
-    renderContent('class10');
-    updateCounts();
-  }
-
-  function saveData() {
-    localStorage.setItem('ql_data', JSON.stringify(allData));
-    updateCounts();
-  }
-
-  // 3. Add Content
-  function addContent(cls) {
-    const subj = document.getElementById('subject-'+cls).value;
-    const title = document.getElementById('chapter-title-'+cls).value;
-    const body = document.getElementById('content-'+cls).value;
-    
-    if(!title) return alert("Title required");
-
-    allData.push({ type: 'note', class: cls, subject: subj, title: title, body: body });
-    saveData();
-    renderContent(cls);
-    document.getElementById('admin-'+cls).classList.remove('active');
-    alert("Note Added!");
-  }
-
-  function renderContent(cls) {
-    const list = allData.filter(d => d.type === 'note' && d.class === cls);
-    const container = document.getElementById('view-'+cls);
-    container.innerHTML = list.map(item => `
-      <div class="card">
-        <h3>${item.subject || 'General'}</h3>
-        <h4>${item.title}</h4>
-        <p style="white-space: pre-wrap; margin-top:10px; color:#ccc">${item.body}</p>
-      </div>
-    `).join('');
-  }
-
-  // 4. Mock Test Logic
-  function addQuestion() {
-    const q = {
-      type: 'question',
-      class: document.getElementById('test-class').value,
-      text: document.getElementById('q-text').value,
-      options: {
-        A: document.getElementById('opt-a').value,
-        B: document.getElementById('opt-b').value,
-        C: document.getElementById('opt-c').value,
-        D: document.getElementById('opt-d').value,
-      },
-      correct: document.getElementById('correct-opt').value
-    };
-    allData.push(q);
-    saveData();
-    alert("Question Saved!");
-  }
-
-  function updateCounts() {
-    document.getElementById('count-9').innerText = allData.filter(d => d.type=='question' && d.class=='9').length + " Questions";
-    document.getElementById('count-10').innerText = allData.filter(d => d.type=='question' && d.class=='10').length + " Questions";
-  }
-
-  function startTest(cls) {
-    testSession.questions = allData.filter(d => d.type=='question' && d.class==cls);
-    if(testSession.questions.length === 0) return alert("No questions added yet!");
-    
-    testSession.index = 0;
-    testSession.score = 0;
-    document.getElementById('test-select').style.display = 'none';
-    document.getElementById('test-ui').style.display = 'block';
-    showQuestion();
-  }
-
-  function showQuestion() {
-    const q = testSession.questions[testSession.index];
-    document.getElementById('q-display-num').innerText = `Question ${testSession.index + 1}`;
-    document.getElementById('q-display-text').innerText = q.text;
-    
-    const optsDiv = document.getElementById('options-container');
-    optsDiv.innerHTML = Object.keys(q.options).map(key => `
-      <div class="option-item" onclick="checkAnswer('${key}', '${q.correct}', this)">
-        ${key}. ${q.options[key]}
-      </div>
-    `).join('');
-  }
-
-  function checkAnswer(selected, correct, el) {
-    if(selected === correct) {
-      el.style.borderColor = "#00ff88";
-      el.style.backgroundColor = "rgba(0,255,136,0.2)";
-      testSession.score++;
-    } else {
-      el.style.borderColor = "#ff4444";
-      el.style.backgroundColor = "rgba(255,68,68,0.2)";
+    function nav(pageId, btn){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      const el = document.getElementById(pageId);
+      if(el) el.classList.add('active');
+      document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+      if(btn && btn.classList) btn.classList.add('active');
+      // close mobile menu if open
+      const menu = document.querySelector('.site-nav');
+      if(menu && menu.classList.contains('open')) menu.classList.remove('open');
+      window.scrollTo({top:0, behavior:'smooth'});
     }
-    // Disable further clicks
-    document.querySelectorAll('.option-item').forEach(o => o.onclick = null);
-  }
 
-  function nextQuestion() {
-    testSession.index++;
-    if(testSession.index < testSession.questions.length) {
+    function toggleAdmin(id, btn){
+      const panel = document.getElementById('admin-'+id);
+      if(!panel) return;
+      panel.classList.toggle('active');
+      panel.setAttribute('aria-hidden', !panel.classList.contains('active'));
+      if(btn) btn.classList.toggle('active');
+    }
+
+    function toggleMobileMenu(btn){
+      const nav = document.querySelector('.site-nav');
+      if(!nav) return;
+      nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+    }
+
+    // Content CRUD (local storage prototype)
+    function addContent(cls){
+      const subj = document.getElementById('subject-class'+cls).value || 'General';
+      const title = document.getElementById('chapter-title-class'+cls).value || 'Untitled';
+      const body = document.getElementById('content-class'+cls).value || '';
+      allData.push({type:'note', class: cls, subject: subj, title: title, body: body, id: Date.now().toString()});
+      saveData();
+      renderContent(cls);
+      alert('Saved');
+    }
+
+    function renderContent(cls){
+      const container = document.getElementById('view-class'+cls);
+      const list = allData.filter(d=>d.type==='note' && d.class==cls);
+      if(!container) return;
+      container.innerHTML = list.map(item=>`
+        <div class="card">
+          <h4>${'${item.subject}'}</h4>
+          <h3>${'${item.title}'}</h3>
+          <p>${'${item.body}'}</p>
+        </div>
+      `).join('') || `<div class="card"><p>No notes yet. Use + Add Note to create one.</p></div>`;
+    }
+
+    // Mock tests
+    function addQuestion(){
+      const q = {
+        type:'question',
+        class: document.getElementById('test-class').value,
+        text: document.getElementById('q-text').value,
+        options: {
+          A: document.getElementById('opt-a').value,
+          B: document.getElementById('opt-b').value,
+          C: document.getElementById('opt-c').value,
+          D: document.getElementById('opt-d').value
+        },
+        correct: document.getElementById('correct-opt').value,
+        id: Date.now().toString()
+      };
+      allData.push(q); saveData(); alert('Question saved'); updateCounts();
+    }
+
+    function updateCounts(){
+      document.getElementById('count-9').innerText = allData.filter(d=>d.type==='question'&&d.class=='9').length + ' Questions';
+      document.getElementById('count-10').innerText = allData.filter(d=>d.type==='question'&&d.class=='10').length + ' Questions';
+    }
+
+    function startTest(cls){
+      testSession.questions = allData.filter(d=>d.type==='question'&&d.class==cls);
+      if(testSession.questions.length===0){ alert('No questions'); return; }
+      testSession.index = 0; testSession.score = 0;
+      document.getElementById('test-select').style.display = 'none';
+      document.getElementById('test-ui').style.display = 'block';
       showQuestion();
-    } else {
-      alert(`Test Complete! Score: ${testSession.score}/${testSession.questions.length}`);
-      cancelTest();
+      document.getElementById('test-ui').setAttribute('aria-hidden','false');
     }
-  }
 
-  function cancelTest() {
-    document.getElementById('test-ui').style.display = 'none';
-    document.getElementById('test-select').style.display = 'grid';
-  }
+    function showQuestion(){
+      const q = testSession.questions[testSession.index];
+      document.getElementById('q-display-num').innerText = `Question ${testSession.index+1} of ${testSession.questions.length}`;
+      document.getElementById('q-display-text').innerText = q.text;
+      const opts = document.getElementById('options-container');
+      opts.innerHTML = Object.keys(q.options).map(k=>`<div class="option-item" role="button" tabindex="0" onclick="checkAnswer('${k}','${q.correct}', this)">${k}. ${'${q.options[k]}'}</div>`).join('');
+      // disable Next until answered
+      const next = document.querySelector('#test-ui .test-actions .btn');
+      if(next) next.disabled = true;
+    }
 
-  // Initialize
-  window.onload = loadData;
+    function checkAnswer(selected, correct, el){
+      if(selected===correct){ el.classList.add('correct'); testSession.score++; }
+      else { el.classList.add('incorrect'); }
+      document.querySelectorAll('#options-container .option-item').forEach(x=>x.onclick=null);
+      const next = document.querySelector('#test-ui .test-actions .btn');
+      if(next) next.disabled = false;
+    }
 
-</script>
+    function nextQuestion(){ testSession.index++; if(testSession.index<testSession.questions.length) showQuestion(); else { alert('Test complete: '+testSession.score+'/'+testSession.questions.length); cancelTest(); } }
+
+    function cancelTest(){ document.getElementById('test-ui').style.display='none'; document.getElementById('test-select').style.display='grid'; document.getElementById('test-ui').setAttribute('aria-hidden','true'); }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', ()=>{ renderContent(9); renderContent(10); updateCounts(); });
+  </script>
 </body>
 </html>
