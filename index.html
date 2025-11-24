@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Quantum Leap — BSE Odisha Notes (Class 9 & 10)</title>
+  <title>Quantum Leap — BSE Odisha Notes</title>
   <meta name="description" content="Quantum Leap: Class 9 & Class 10 BSE Odisha notes, mock tests, and downloadable materials.">
   
   <link rel="icon" href="/public/logo.png" />
@@ -14,7 +14,6 @@
 
   <header class="site-header">
     <div class="container header-content">
-
       <div class="brand">
         <img src="/public/logo.png" class="brand-logo" alt="Quantum Leap">
         <div class="brand-text">
@@ -29,6 +28,7 @@
         <button class="nav-btn" onclick="nav('class10', this)">Class 10</button>
         <button class="nav-btn" onclick="nav('mock-tests', this)">Mock Tests</button>
         <button class="nav-btn" onclick="nav('downloads', this)">Downloads</button>
+        <button class="nav-btn" onclick="nav('contact', this)">Contact</button>
         <button class="nav-btn" onclick="nav('about', this)">About</button>
       </nav>
 
@@ -42,9 +42,9 @@
       <div class="hero neon-hero">
         <h1>Odisha Board Learning, Reinvented</h1>
         <p class="lead">
-          Clean, structured notes and exam-focused mock tests for Class 9 & 10.
+          Concept-driven physics, clear notes, and exam-focused mock tests for Class 9 & 10 students.
         </p>
-        <div class="cta-row" style="margin-top:20px; display:flex; gap:10px; justify-content:center;">
+        <div class="cta-row" style="margin-top:24px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
           <button class="btn" onclick="nav('class9', this)">Explore Class 9</button>
           <button class="btn ghost" onclick="nav('mock-tests', this)">Try Mock Tests</button>
         </div>
@@ -53,19 +53,19 @@
       <div class="grid">
         <div class="card neon-card">
           <h3>Class 9 Notes</h3>
-          <p>Well-structured chapter-wise notes for all BSE Odisha subjects.</p>
+          <p class="small">Well-structured chapter-wise notes for Science & Math.</p>
         </div>
         <div class="card neon-card">
           <h3>Class 10 Notes</h3>
-          <p>High-scoring explanations, examples and revision content.</p>
+          <p class="small">High-scoring explanations, examples and revision content.</p>
         </div>
         <div class="card neon-card">
           <h3>Free Mock Tests</h3>
-          <p>Instant scoring. Exam-level questions. Unlimited attempts.</p>
+          <p class="small">Instant scoring. Exam-level questions. Unlimited attempts.</p>
         </div>
         <div class="card neon-card">
           <h3>Downloads</h3>
-          <p>Get PDFs and revision sheets delivered to your email.</p>
+          <p class="small">Get PDFs and revision sheets delivered to your inbox.</p>
         </div>
       </div>
     </section>
@@ -77,10 +77,10 @@
       </div>
 
       <div id="admin-class9" class="admin-panel">
-        <input id="subject-class9" placeholder="Subject (e.g., Science)" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
-        <input id="chapter-title-class9" placeholder="Chapter Title" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
-        <textarea id="content-class9" placeholder="Write content..." style="width:100%; height:100px; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;"></textarea>
-        <button class="btn" onclick="addContent('9')">Save</button>
+        <input id="subject-class9" placeholder="Subject (e.g., Science)" style="width:100%; margin-bottom:8px; padding:10px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <input id="chapter-title-class9" placeholder="Chapter Title" style="width:100%; margin-bottom:8px; padding:10px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <textarea id="content-class9" placeholder="Write summary..." style="width:100%; height:100px; margin-bottom:8px; padding:10px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;"></textarea>
+        <button class="btn" onclick="addContent('9')">Save Note</button>
       </div>
 
       <div id="view-class9" class="grid"></div>
@@ -93,10 +93,10 @@
       </div>
 
       <div id="admin-class10" class="admin-panel">
-        <input id="subject-class10" placeholder="Subject" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
-        <input id="chapter-title-class10" placeholder="Chapter Title" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
-        <textarea id="content-class10" placeholder="Write content..." style="width:100%; height:100px; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;"></textarea>
-        <button class="btn" onclick="addContent('10')">Save</button>
+        <input id="subject-class10" placeholder="Subject" style="width:100%; margin-bottom:8px; padding:10px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <input id="chapter-title-class10" placeholder="Chapter Title" style="width:100%; margin-bottom:8px; padding:10px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <textarea id="content-class10" placeholder="Write summary..." style="width:100%; height:100px; margin-bottom:8px; padding:10px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;"></textarea>
+        <button class="btn" onclick="addContent('10')">Save Note</button>
       </div>
 
       <div id="view-class10" class="grid"></div>
@@ -110,13 +110,13 @@
       <div id="test-select" class="test-selection grid">
         <div class="card neon-card">
           <h3>Class 9 Test</h3>
-          <p id="count-9">Science & Math</p>
+          <p class="small" style="color:var(--muted); margin: 8px 0;">Subject: Science & Math<br>Level: Intermediate</p>
           <button class="btn" onclick="startTest('9')">Start Test</button>
         </div>
 
         <div class="card neon-card">
-          <h3>Class 10 Test</h3>
-          <p id="count-10">Board Prep</p>
+          <h3>Class 10 Board Prep</h3>
+          <p class="small" style="color:var(--muted); margin: 8px 0;">Subject: Physical Science<br>Level: Board Exam</p>
           <button class="btn" onclick="startTest('10')">Start Test</button>
         </div>
       </div>
@@ -124,29 +124,76 @@
       <div id="test-ui" class="test-interface">
         <div class="card neon-card" style="border-color: #333;">
            <h3 id="q-display-num" style="color:var(--primary)">Question</h3>
-           <p id="q-display-text" style="font-size:1.1rem; margin-bottom:20px;"></p>
+           <p id="q-display-text" style="font-size:1.1rem; margin-bottom:20px; font-weight:500;"></p>
+           
            <div id="options-container" class="options-list"></div>
-           <div style="margin-top:20px; display:flex; gap:10px;">
-             <button class="btn" onclick="nextQuestion()">Next</button>
-             <button class="btn ghost" onclick="cancelTest()">Exit</button>
+           
+           <div style="margin-top:24px; display:flex; gap:12px;">
+             <button class="btn" onclick="nextQuestion()">Next Question</button>
+             <button class="btn ghost" onclick="cancelTest()">Exit Test</button>
            </div>
         </div>
       </div>
     </section>
 
     <section id="downloads" class="page">
+      <div class="page-header">
+        <h2>Downloads</h2>
+      </div>
       <div class="card neon-card">
-        <h3>Request PDFs</h3>
-        <p>Email chapter details to: <strong>contact@quantumleap.edu</strong></p>
+        <h3>Study Materials (PDF)</h3>
+        <p class="small" style="color:var(--muted)">Currently, our automated download system is being upgraded.</p>
+        <p style="margin-top:12px;">
+          To request specific chapters, please email us with the subject line <strong>"PDF Request - [Class]"</strong>.
+        </p>
+        <a href="mailto:contact@quantumleap.edu" class="btn" style="display:inline-block; text-decoration:none; margin-top:12px;">Email Request</a>
+      </div>
+    </section>
+
+    <section id="contact" class="page">
+      <div class="page-header">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="grid">
+        <div class="card neon-card">
+          <h3>General Inquiries</h3>
+          <p class="small" style="color:var(--muted); margin-bottom:12px;">For feedback, suggestions, or support.</p>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.2rem;">📧</span>
+            <strong>contact@quantumleap.edu</strong>
+          </div>
+        </div>
+        <div class="card neon-card">
+          <h3>Community</h3>
+          <p class="small" style="color:var(--muted); margin-bottom:12px;">Join our student community on Telegram.</p>
+          <button class="btn ghost">Join Telegram Channel</button>
+        </div>
       </div>
     </section>
 
     <section id="about" class="page">
+      <div class="page-header">
+        <h2>About Quantum Leap</h2>
+      </div>
+      
+      <div class="card neon-card" style="margin-bottom:16px;">
+        <h3>Our Vision</h3>
+        <p style="color:#b0b8c4; line-height:1.6;">
+          We empower students with concept-driven physics education and Odisha Board curriculum-aligned notes. 
+          Our goal is to move students from ignorance to enlightenment through structured learning.
+        </p>
+      </div>
+
       <div class="card neon-card">
-        <h3>About Quantum Leap</h3>
-        <p>
-          We deliver clear, structured notes and practice tools designed
-          specifically for BSE Odisha students.
+        <h3>Founder</h3>
+        <div style="display:flex; align-items:center; gap:16px; margin-top:12px;">
+          <div>
+            <h4 style="margin:0; font-size:1.1rem; color:var(--primary);">Ram</h4>
+            <div style="font-size:0.85rem; color:var(--accent);">Physicist & Educator</div>
+          </div>
+        </div>
+        <p style="margin-top:12px; font-size:0.95rem; color:#b0b8c4; line-height:1.6;">
+          With a background in Philosophy and Psychology, Ram is building Quantum Leap to simplify physics learning specifically for students in Odisha.
         </p>
       </div>
     </section>
@@ -155,7 +202,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      © 2025 Quantum Leap — All Rights Reserved.
+      © 2025 Quantum Leap — From Ignorance to Enlightenment.
     </div>
   </footer>
 
