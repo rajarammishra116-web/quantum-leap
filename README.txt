@@ -1,1 +1,1 @@
-Quantum Leap - production-ready static package. Deploy to Vercel or any static host.
+Quantum Leap - Final production-ready static package (neon theme). Deploy to Vercel or any static host.

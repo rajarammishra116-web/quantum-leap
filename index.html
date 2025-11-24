@@ -1,18 +1,13 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Quantum Leap — Odisha Board Notes (Class 9 & 10)</title>
+  <title>Quantum Leap — BSE Odisha Notes (Class 9 & 10)</title>
   <meta name="description" content="Quantum Leap: concise, curriculum-aligned BSE Odisha Class 9 & Class 10 notes, free mock tests and downloadable PDFs.">
-  <meta name="keywords" content="BSE Odisha notes, Odisha board, class 9 notes, class 10 notes, mock tests, Quantum Leap">
   <link rel="icon" href="/public/logo.png" type="image/png">
   <link rel="stylesheet" href="/public/style.css">
   <meta name="theme-color" content="#0a0a0f">
-  <script type="application/ld+json">
-  { "@context":"https://schema.org", "@type":"EducationalOrganization", "name":"Quantum Leap", "url":"https://quantum-leap-beta.vercel.app", "logo":"https://quantum-leap-beta.vercel.app/public/logo.png", "sameAs": [] }
-  </script>
 </head>
 <body>
   <header class="site-header">
@@ -38,7 +33,7 @@
 
   <main class="container">
     <section id="home" class="page active">
-      <div class="hero">
+      <div class="hero neon-hero">
         <h1>Quantum Leap — Odisha Board Notes</h1>
         <p class="lead">Clear, concise and curriculum-aligned Class 9 & 10 notes with free mock tests designed for BSE Odisha students.</p>
         <div class="cta-row">
@@ -48,22 +43,22 @@
       </div>
 
       <section class="features grid">
-        <article class="card">
+        <article class="card neon-card">
           <h3>Class 9 Notes</h3>
           <p>Chapter-wise summaries, important points, and quick revision sheets.</p>
         </article>
 
-        <article class="card">
+        <article class="card neon-card">
           <h3>Class 10 Notes</h3>
           <p>Complete syllabus coverage with example questions and solved problems.</p>
         </article>
 
-        <article class="card">
+        <article class="card neon-card">
           <h3>Free Mock Tests</h3>
           <p>Exam-pattern tests with instant scoring and detailed solutions.</p>
         </article>
 
-        <article class="card">
+        <article class="card neon-card">
           <h3>Downloadable PDFs</h3>
           <p>Request chapter PDFs or download quick revision guides via email.</p>
         </article>
@@ -79,7 +74,7 @@
       <div id="admin-class9" class="admin-panel" aria-hidden="true">
         <form onsubmit="event.preventDefault(); addContent('9')">
           <label>Subject<input id="subject-class9" placeholder="Subject"></label>
-          <label>Chapter Title<input id="chapter-title-class9" placeholder="Chapter Title"></label>
+          <label>Chapter Title<input id="chapter-title-class9" placeholder="Chapter Title"></input></label>
           <label>Content<textarea id="content-class9" placeholder="Enter study notes..."></textarea></label>
           <div class="form-row"><button class="btn" type="button" onclick="addContent('9')">Save</button></div>
         </form>
@@ -97,7 +92,7 @@
       <div id="admin-class10" class="admin-panel" aria-hidden="true">
         <form onsubmit="event.preventDefault(); addContent('10')">
           <label>Subject<input id="subject-class10" placeholder="Subject"></label>
-          <label>Chapter Title<input id="chapter-title-class10" placeholder="Chapter Title"></label>
+          <label>Chapter Title<input id="chapter-title-class10" placeholder="Chapter Title"></input></label>
           <label>Content<textarea id="content-class10" placeholder="Enter study notes..."></textarea></label>
           <div class="form-row"><button class="btn" type="button" onclick="addContent('10')">Save</button></div>
         </form>
@@ -126,10 +121,10 @@
       </div>
 
       <div id="test-select" class="test-selection grid">
-        <div class="card">
+        <div class="card neon-card">
           <h3>Class 9 Test</h3><p id="count-9">0 Questions</p><button class="btn" onclick="startTest('9')">Start</button>
         </div>
-        <div class="card">
+        <div class="card neon-card">
           <h3>Class 10 Test</h3><p id="count-10">0 Questions</p><button class="btn" onclick="startTest('10')">Start</button>
         </div>
       </div>
@@ -169,7 +164,6 @@
 
   <script src="/public/app.js"></script>
   <script>
-    // Basic client-side data + behaviour (localStorage for prototype)
     const STORAGE_KEY = 'ql_data_v1';
     let allData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
     let testSession = { questions: [], index: 0, score: 0 };
@@ -182,7 +176,6 @@
       if(el) el.classList.add('active');
       document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
       if(btn && btn.classList) btn.classList.add('active');
-      // close mobile menu if open
       const menu = document.querySelector('.site-nav');
       if(menu && menu.classList.contains('open')) menu.classList.remove('open');
       window.scrollTo({top:0, behavior:'smooth'});
@@ -203,7 +196,6 @@
       btn.setAttribute('aria-expanded', nav.classList.contains('open'));
     }
 
-    // Content CRUD (local storage prototype)
     function addContent(cls){
       const subj = document.getElementById('subject-class'+cls).value || 'General';
       const title = document.getElementById('chapter-title-class'+cls).value || 'Untitled';
@@ -219,7 +211,7 @@
       const list = allData.filter(d=>d.type==='note' && d.class==cls);
       if(!container) return;
       container.innerHTML = list.map(item=>`
-        <div class="card">
+        <div class="card neon-card">
           <h4>${'${item.subject}'}</h4>
           <h3>${'${item.title}'}</h3>
           <p>${'${item.body}'}</p>
@@ -227,7 +219,6 @@
       `).join('') || `<div class="card"><p>No notes yet. Use + Add Note to create one.</p></div>`;
     }
 
-    // Mock tests
     function addQuestion(){
       const q = {
         type:'question',
@@ -266,7 +257,6 @@
       document.getElementById('q-display-text').innerText = q.text;
       const opts = document.getElementById('options-container');
       opts.innerHTML = Object.keys(q.options).map(k=>`<div class="option-item" role="button" tabindex="0" onclick="checkAnswer('${k}','${q.correct}', this)">${k}. ${'${q.options[k]}'}</div>`).join('');
-      // disable Next until answered
       const next = document.querySelector('#test-ui .test-actions .btn');
       if(next) next.disabled = true;
     }
@@ -283,7 +273,6 @@
 
     function cancelTest(){ document.getElementById('test-ui').style.display='none'; document.getElementById('test-select').style.display='grid'; document.getElementById('test-ui').setAttribute('aria-hidden','true'); }
 
-    // Init
     document.addEventListener('DOMContentLoaded', ()=>{ renderContent(9); renderContent(10); updateCounts(); });
   </script>
 </body>

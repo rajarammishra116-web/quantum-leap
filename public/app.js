@@ -1,2 +1,2 @@
-// Lightweight app helpers for Quantum Leap
-console.log('Quantum Leap app loaded');
+// Quantum Leap app helpers (prototype, localStorage)
+console.log('Quantum Leap prototype loaded');
