@@ -4,19 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Quantum Leap — BSE Odisha Notes (Class 9 & 10)</title>
-
-  <meta name="description"
-        content="Quantum Leap: Class 9 & Class 10 BSE Odisha notes, mock tests, and downloadable materials.">
-  <meta name="keywords"
-        content="BSE Odisha notes, Odisha 9th notes, Odisha 10th notes, Quantum Leap, free mock tests">
-
+  <meta name="description" content="Quantum Leap: Class 9 & Class 10 BSE Odisha notes, mock tests, and downloadable materials.">
+  
   <link rel="icon" href="/public/logo.png" />
   <link rel="stylesheet" href="/public/style.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
 
@@ -41,19 +36,15 @@
     </div>
   </header>
 
-  <!-- MAIN -->
   <main class="container">
 
-    <!-- HOME -->
     <section id="home" class="page active">
-
       <div class="hero neon-hero">
         <h1>Odisha Board Learning, Reinvented</h1>
         <p class="lead">
           Clean, structured notes and exam-focused mock tests for Class 9 & 10.
         </p>
-
-        <div class="cta-row">
+        <div class="cta-row" style="margin-top:20px; display:flex; gap:10px; justify-content:center;">
           <button class="btn" onclick="nav('class9', this)">Explore Class 9</button>
           <button class="btn ghost" onclick="nav('mock-tests', this)">Try Mock Tests</button>
         </div>
@@ -64,17 +55,14 @@
           <h3>Class 9 Notes</h3>
           <p>Well-structured chapter-wise notes for all BSE Odisha subjects.</p>
         </div>
-
         <div class="card neon-card">
           <h3>Class 10 Notes</h3>
           <p>High-scoring explanations, examples and revision content.</p>
         </div>
-
         <div class="card neon-card">
           <h3>Free Mock Tests</h3>
           <p>Instant scoring. Exam-level questions. Unlimited attempts.</p>
         </div>
-
         <div class="card neon-card">
           <h3>Downloads</h3>
           <p>Get PDFs and revision sheets delivered to your email.</p>
@@ -82,7 +70,6 @@
       </div>
     </section>
 
-    <!-- CLASS 9 -->
     <section id="class9" class="page">
       <div class="page-header">
         <h2>Class 9 — BSE Odisha</h2>
@@ -90,16 +77,15 @@
       </div>
 
       <div id="admin-class9" class="admin-panel">
-        <input id="subject-class9" placeholder="Subject">
-        <input id="chapter-title-class9" placeholder="Chapter Title">
-        <textarea id="content-class9" placeholder="Write content..."></textarea>
+        <input id="subject-class9" placeholder="Subject (e.g., Science)" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <input id="chapter-title-class9" placeholder="Chapter Title" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <textarea id="content-class9" placeholder="Write content..." style="width:100%; height:100px; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;"></textarea>
         <button class="btn" onclick="addContent('9')">Save</button>
       </div>
 
-      <div id="view-class9" class="subjects-grid"></div>
+      <div id="view-class9" class="grid"></div>
     </section>
 
-    <!-- CLASS 10 -->
     <section id="class10" class="page">
       <div class="page-header">
         <h2>Class 10 — BSE Odisha</h2>
@@ -107,69 +93,47 @@
       </div>
 
       <div id="admin-class10" class="admin-panel">
-        <input id="subject-class10" placeholder="Subject">
-        <input id="chapter-title-class10" placeholder="Chapter Title">
-        <textarea id="content-class10" placeholder="Write content..."></textarea>
+        <input id="subject-class10" placeholder="Subject" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <input id="chapter-title-class10" placeholder="Chapter Title" style="width:100%; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;">
+        <textarea id="content-class10" placeholder="Write content..." style="width:100%; height:100px; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #333; background:#0b0f1a; color:white;"></textarea>
         <button class="btn" onclick="addContent('10')">Save</button>
       </div>
 
-      <div id="view-class10" class="subjects-grid"></div>
+      <div id="view-class10" class="grid"></div>
     </section>
 
-    <!-- MOCK TESTS -->
     <section id="mock-tests" class="page">
       <div class="page-header">
         <h2>Mock Tests</h2>
-        <button class="admin-toggle" onclick="toggleAdmin('tests', this)">+ Add Question</button>
-      </div>
-
-      <div id="admin-tests" class="admin-panel">
-        <select id="test-class">
-          <option value="9">Class 9</option>
-          <option value="10">Class 10</option>
-        </select>
-
-        <textarea id="q-text" placeholder="Write question..."></textarea>
-
-        <div class="grid two">
-          <input id="opt-a" placeholder="Option A">
-          <input id="opt-b" placeholder="Option B">
-          <input id="opt-c" placeholder="Option C">
-          <input id="opt-d" placeholder="Option D">
-        </div>
-
-        <select id="correct-opt">
-          <option value="A">A</option><option value="B">B</option>
-          <option value="C">C</option><option value="D">D</option>
-        </select>
-
-        <button class="btn" onclick="addQuestion()">Save Question</button>
       </div>
 
       <div id="test-select" class="test-selection grid">
         <div class="card neon-card">
           <h3>Class 9 Test</h3>
-          <p id="count-9">0 Questions</p>
-          <button class="btn" onclick="startTest('9')">Start</button>
+          <p id="count-9">Science & Math</p>
+          <button class="btn" onclick="startTest('9')">Start Test</button>
         </div>
 
         <div class="card neon-card">
           <h3>Class 10 Test</h3>
-          <p id="count-10">0 Questions</p>
-          <button class="btn" onclick="startTest('10')">Start</button>
+          <p id="count-10">Board Prep</p>
+          <button class="btn" onclick="startTest('10')">Start Test</button>
         </div>
       </div>
 
       <div id="test-ui" class="test-interface">
-        <h3 id="q-display-num">Question</h3>
-        <p id="q-display-text"></p>
-        <div id="options-container" class="options-list"></div>
-        <button class="btn" onclick="nextQuestion()">Next</button>
-        <button class="btn ghost" onclick="cancelTest()">Exit</button>
+        <div class="card neon-card" style="border-color: #333;">
+           <h3 id="q-display-num" style="color:var(--primary)">Question</h3>
+           <p id="q-display-text" style="font-size:1.1rem; margin-bottom:20px;"></p>
+           <div id="options-container" class="options-list"></div>
+           <div style="margin-top:20px; display:flex; gap:10px;">
+             <button class="btn" onclick="nextQuestion()">Next</button>
+             <button class="btn ghost" onclick="cancelTest()">Exit</button>
+           </div>
+        </div>
       </div>
     </section>
 
-    <!-- DOWNLOADS -->
     <section id="downloads" class="page">
       <div class="card neon-card">
         <h3>Request PDFs</h3>
@@ -177,7 +141,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="page">
       <div class="card neon-card">
         <h3>About Quantum Leap</h3>
